@@ -8,8 +8,15 @@ module.exports = {
   ],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   settings: { react: { version: '18.2' } },
-  plugins: ['react-refresh'],
+  plugins: [
+    'react-refresh',
+    "react",
+    "react-hooks"
+  ],
   rules: {
     'react-refresh/only-export-components': 'warn',
+    "react/prop-types": "off", // Optional: if you don't want to enforce prop-types
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   },
 }
